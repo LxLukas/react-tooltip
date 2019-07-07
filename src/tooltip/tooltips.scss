@@ -1,0 +1,125 @@
+/**
+ * name: 
+ * desc:
+ * date: 2019/7/6
+ * author: kelvin
+ */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    transform: translateZ(0);
+    &-top {
+        .tooltip-body-wrapper {
+            bottom: 100%;
+            transform: translate(-50%, -10px);
+            left: 50%;
+            margin-bottom: 15px;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -10px;
+                height: 0;
+                width: 0;
+                margin-left: -10px;
+                border-left: solid transparent 10px;
+                border-right: solid transparent 10px;
+                border-top: solid #aaaaaa 10px;
+            }
+        }
+
+        .tooltip-header-wrapper:hover .tooltip-body-wrapper {
+            transform: translate(-50%, 0px);
+        }
+    }
+    &-bottom {
+        .tooltip-body-wrapper {
+            top: 100%;
+            transform: translate(-50%, 10px);
+            left: 50%;
+            margin-top: 15px;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: -10px;
+                height: 0;
+                width: 0;
+                margin-left: -10px;
+                border-left: solid transparent 10px;
+                border-right: solid transparent 10px;
+                border-bottom: solid #aaaaaa 10px;
+            }
+        }
+        .tooltip-header-wrapper:hover .tooltip-body-wrapper {
+            transform: translate(-50%, 0px);
+        }
+    }
+    &-left {
+        .tooltip-body-wrapper {
+            right: 100%;
+            transform: translate(-10px, -50%);
+            top: 50%;
+            margin-right: 15px;
+            &:after {
+                content: '';
+                position: absolute;
+                right: -10px;
+                top: 50%;
+                height: 0;
+                width: 0;
+                margin-top: -10px;
+                border-top: solid transparent 10px;
+                border-bottom: solid transparent 10px;
+                border-left: solid #aaaaaa 10px;
+            }
+        }
+        .tooltip-header-wrapper:hover .tooltip-body-wrapper {
+            transform: translate(0px, -50%);
+        }
+    }
+    &-right {
+        .tooltip-body-wrapper {
+            left: 100%;
+            top: 50%;
+            transform: translate(10px, -50%);
+            margin-left: 15px;
+            &:after {
+                content: '';
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                height: 0;
+                width: 0;
+                margin-top: -10px;
+                border-top: solid transparent 10px;
+                border-bottom: solid transparent 10px;
+                border-right: solid #aaaaaa 10px;
+            }
+        }
+        .tooltip-header-wrapper:hover .tooltip-body-wrapper {
+            transform: translate(0, -50%);
+        }
+    }
+
+    &-header-wrapper {
+        display: inline-flex;
+        cursor: pointer;
+        background-color: #dddddd;
+    }
+    &-header-wrapper:hover .tooltip-body-wrapper {
+        opacity: 1;
+        visibility: visible;
+    }
+    &-body-wrapper {
+        background-color: #aaaaaa;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s ease-out;
+        padding: 10px;
+        display: block;
+    }
+}
