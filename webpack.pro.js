@@ -12,9 +12,9 @@ webpackConfig = {
         index: './src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js',
-        chunkFilename: '[name].[chunkhash].js'
+        path: path.resolve(__dirname, 'lib'),
+        filename: 'index.js',
+        libraryTarget: 'umd'
     },
     module: {
         rules: [

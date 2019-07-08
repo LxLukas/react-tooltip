@@ -1,14 +1,14 @@
 {
-    "name": "react-tooltip",
-    "version": "1.0.0",
+    "name": "x-react-tooltip",
+    "version": "1.0.3",
     "description": "react tooltip",
-    "main": "dist/index.js",
+    "main": "lib/index.js",
     "scripts": {
         "start": "webpack-dev-server --config webpack.dev.js",
         "build": "webpack --config webpack.pro.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "kelvin",
+    "author": "hope_kelvin",
     "license": "ISC",
     "devDependencies": {
         "@babel/cli": "^7.5.0",

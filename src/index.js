@@ -5,6 +5,6 @@
  * author: kelvin
  */
 
-import Tooltip from './tooltip/tooltips'
+import Tooltip from './tooltip/tooltip'
 
 export {Tooltip}
