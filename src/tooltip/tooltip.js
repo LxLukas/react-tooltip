@@ -56,10 +56,12 @@ export default class Tooltip extends React.Component {
     };
 
     handleMouseIn(e) {
-        if (!this.refs.tooltipHeader.children[0].contains(e.target)) {
-            // hover非 tooltip header 部分
-            return;
-        }
+        console.log('event target:', e.target);
+
+        // if (!this.refs.tooltipHeader.children[0].contains(e.target)) {
+        //     // hover非 tooltip header 部分
+        //     return;
+        // }
 
         let winWidth = window.innerWidth;
         let winHeight = window.innerHeight;
@@ -67,6 +69,10 @@ export default class Tooltip extends React.Component {
         let tooltipHeaderRef = this.refs.tooltipHeader;
         let bodyRect = tooltipBodyRef.getBoundingClientRect();
         let headerRect = tooltipHeaderRef.getBoundingClientRect();
+
+        console.log(bodyRect);
+        console.log(headerRect);
+
         switch (this.props.position) {
             case 'top':
                 if (headerRect.y - bodyRect.height - GAPWIDTH < 0) {
