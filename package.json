@@ -1,6 +1,6 @@
 {
     "name": "x-react-tooltip",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "description": "react tooltip",
     "main": "lib/index.js",
     "scripts": {
@@ -30,9 +30,12 @@
         "style-loader": "^0.23.1",
         "webpack": "^4.35.2",
         "webpack-cli": "^3.3.5",
-        "webpack-dev-server": "^3.7.2"
+        "webpack-dev-server": "^3.7.2",
+        "x-react-tooltip": "^1.0.5"
     },
     "dependencies": {
-        "@babel/polyfill": "^7.4.4"
+        "@babel/polyfill": "^7.4.4",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
     }
 }

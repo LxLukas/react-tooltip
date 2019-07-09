@@ -6,7 +6,7 @@
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Tooltip} from '../src/index'
+import {Tooltip} from 'x-react-tooltip'
 import './index.scss'
 
 class Index extends React.Component {

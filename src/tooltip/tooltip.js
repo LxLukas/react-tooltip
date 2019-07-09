@@ -63,10 +63,10 @@ export default class Tooltip extends React.Component {
 
         let winWidth = window.innerWidth
         let winHeight = window.innerHeight
-        let tooltipBody = this.refs.tooltipBody
-        let tooltipHeader = this.refs.tooltipHeader
-        let bodyRect = tooltipBody.getBoundingClientRect()
-        let headerRect = tooltipHeader.getBoundingClientRect()
+        let tooltipBodyRef = this.refs.tooltipBody
+        let tooltipHeaderRef = this.refs.tooltipHeader
+        let bodyRect = tooltipBodyRef.getBoundingClientRect()
+        let headerRect = tooltipHeaderRef.getBoundingClientRect()
         switch (this.props.position) {
             case 'top':
                 if (headerRect.y - bodyRect.height - GAPWIDTH < 0) {

@@ -14,7 +14,8 @@ webpackConfig = {
     output: {
         path: path.resolve(__dirname, 'lib'),
         filename: 'index.js',
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        library: 'x-react-tooltip'
     },
     module: {
         rules: [
@@ -24,14 +25,18 @@ webpackConfig = {
             {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']}
         ]
     },
+    resolve: {
+        alias: {
+            react: path.resolve(__dirname, 'node_modules', 'react')
+        }
+    },
+    externals:{
+        'react':'React',
+        'react-dom':'ReactDOM'
+    },
     plugins: [
         new CleanWebpackPlugin()
     ],
-    resolve: {
-        alias: {
-            Components: path.resolve(__dirname, 'src')
-        }
-    },
     mode: 'production'
 }
 
