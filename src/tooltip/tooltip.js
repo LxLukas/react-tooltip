@@ -132,12 +132,13 @@ export default class Tooltip extends React.Component {
         const {children, position, disabled} = this.props;
         const {computedPosition} = this.state;
         const [Header, Body] = children;
-        const tooltipCls = classnames('tooltip', `tooltip-${computedPosition === '' ? position : computedPosition}`, {'disabled': disabled});
+        const tooltipCls = classnames('tooltip', `tooltip-${computedPosition === '' ? position : computedPosition}`);
+        const tooltipHeadCls = classnames('tooltip-header-wrapper', {'disabled': disabled});
         return (
             <div className={tooltipCls}>
                 <div
                     ref={"tooltipHeader"}
-                    className="tooltip-header-wrapper"
+                    className={tooltipHeadCls}
                     onMouseEnter={this.handleMouseIn.bind(this)}
                     onMouseLeave={this.handleMouseOut.bind(this)}
                 >

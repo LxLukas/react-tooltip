@@ -9,6 +9,7 @@
     position: relative;
     display: inline-block;
     -webkit-font-smoothing: antialiased;
+
     &-top {
         .tooltip-body-wrapper {
             bottom: 100%;
@@ -120,7 +121,7 @@
         padding: 10px;
     }
 
-    &-header-wrapper:hover .tooltip-body-wrapper {
+    &-header-wrapper:not(.disabled):hover .tooltip-body-wrapper {
         opacity: 1;
         visibility: visible;
     }

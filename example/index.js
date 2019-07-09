@@ -17,7 +17,7 @@ class Index extends React.Component {
                 <div className="content">
                     <div className="row">
                         <div className="col">
-                            <Tooltip position="right">
+                            <Tooltip position="right" disabled={true}>
                                 <Tooltip.Header>右方</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div>内容过于真实，tooltips</div>
