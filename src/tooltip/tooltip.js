@@ -73,52 +73,44 @@ export default class Tooltip extends React.Component {
             case 'top':
                 if (headerRect.y - bodyRect.height - GAPWIDTH < 0) {
                     this.setState({
-                        computedPosition: 'bottom',
-                        overValue: 'initial'
+                        computedPosition: 'bottom'
                     });
                 } else {
                     this.setState({
-                        computedPosition: '',
-                        overValue: 'initial'
+                        computedPosition: ''
                     });
                 }
                 break;
             case 'bottom':
                 if (headerRect.bottom + bodyRect.height + GAPWIDTH > winHeight) {
                     this.setState({
-                        computedPosition: 'top',
-                        overValue: 'initial'
+                        computedPosition: 'top'
                     });
                 } else {
                     this.setState({
-                        computedPosition: '',
-                        overValue: 'initial'
+                        computedPosition: ''
                     });
                 }
                 break;
             case 'left':
                 if (headerRect.x - bodyRect.width - GAPWIDTH < 0) {
                     this.setState({
-                        computedPosition: 'right',
-                        overValue: 'initial'
+                        computedPosition: 'right'
                     });
                 } else {
                     this.setState({
-                        computedPosition: '',
-                        overValue: 'initial'
+                        computedPosition: ''
                     });
                 }
                 break;
             case 'right':
                 if (headerRect.right + bodyRect.width + GAPWIDTH > winWidth) {
                     this.setState({
-                        computedPosition: 'left',
-                        overValue: 'initial'
+                        computedPosition: 'left'
                     });
                 } else {
                     this.setState({
-                        computedPosition: '',
-                        overValue: 'initial'
+                        computedPosition: ''
                     });
                 }
                 break;
@@ -140,7 +132,6 @@ export default class Tooltip extends React.Component {
         const tooltipHeadCls = classnames('tooltip-header-wrapper', {'disabled': disabled});
         return (
             <div
-                style={{overflow: this.state.overValue}}
                 className={tooltipCls}>
                 <div
                     ref={"tooltipHeader"}
