@@ -41,12 +41,14 @@ export default class Tooltip extends React.Component {
         position: PropTypes.oneOf(['top', 'bottom', 'right', 'left']),
         disabled: PropTypes.bool,
         mouseIn: PropTypes.func,
-        mouseOut: PropTypes.func
+        mouseOut: PropTypes.func,
+        className: PropTypes.string
     };
 
     static defaultProps = {
         position: 'bottom',
         disabled: false,
+        className: null,
         mouseIn: null,
         mouseOut: null
     };
@@ -125,13 +127,14 @@ export default class Tooltip extends React.Component {
     }
 
     render() {
-        const {children, position, disabled} = this.props;
+        const {children, position, disabled, className, style} = this.props;
         const {computedPosition} = this.state;
         const [Header, Body] = children;
-        const tooltipCls = classnames('tooltip', `tooltip-${computedPosition === '' ? position : computedPosition}`);
+        const tooltipCls = classnames('tooltip', className, `tooltip-${computedPosition === '' ? position : computedPosition}`);
         const tooltipHeadCls = classnames('tooltip-header-wrapper', {'disabled': disabled});
         return (
             <div
+                style={style}
                 className={tooltipCls}>
                 <div
                     ref={"tooltipHeader"}

@@ -17,7 +17,7 @@ class Index extends React.Component {
                 <div className="content">
                     <div className="row">
                         <div className="col">
-                            <Tooltip position="right">
+                            <Tooltip position="right" className="test-class">
                                 <Tooltip.Header>右方</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div>内容过于真实，tooltips</div>
@@ -60,7 +60,7 @@ class Index extends React.Component {
                         </div>
                         <div className="col">
                             <Tooltip position="right">
-                                <Tooltip.Header>右方</Tooltip.Header>
+                                <Tooltip.Header>右方列表</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div style={{width: 200}}>
                                         <ul className="demo-list">
@@ -75,7 +75,7 @@ class Index extends React.Component {
                         </div>
                         <div className="col">
                             <Tooltip position="top">
-                                <Tooltip.Header>上方</Tooltip.Header>
+                                <Tooltip.Header>上方图片</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div>
                                         <img
@@ -88,7 +88,7 @@ class Index extends React.Component {
                         </div>
                         <div className="col">
                             <Tooltip position="bottom">
-                                <Tooltip.Header>下方</Tooltip.Header>
+                                <Tooltip.Header>下方图片</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div>
                                         <img
