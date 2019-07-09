@@ -44,12 +44,14 @@ import {Tooltip} from 'x-react-tooltip'
 | mouseOut | function | 无默认值 | tooltip鼠标移出时的callback |
 
 - Tooltip.Header
+
 | 参数 | 类型 | 值 | 含义 |
 | ------ | ------ | ------ | ------ |
 | style | object | 无默认值 | 行内样式 |
 
 
 - Tooltip.Body
+
 | 参数 | 类型 | 值 | 含义 |
 | ------ | ------ | ------ | ------ |
 | style | object | 无默认值 | 行内样式 |
@@ -60,6 +62,8 @@ import {Tooltip} from 'x-react-tooltip'
 ```
 npm start
 ```
+
+项目启动后直接访问 localhost:9001 即可看到展示页面
 
 ## 打包发布
 
