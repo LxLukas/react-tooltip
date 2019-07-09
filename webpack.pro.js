@@ -4,8 +4,8 @@
  * date: 2019/7/6
  * author: kelvin
  */
-const path = require('path')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const path = require('path');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 webpackConfig = {
     entry: {
@@ -25,19 +25,14 @@ webpackConfig = {
             {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']}
         ]
     },
-    resolve: {
-        alias: {
-            react: path.resolve(__dirname, 'node_modules', 'react')
-        }
-    },
-    externals:{
-        'react':'React',
-        'react-dom':'ReactDOM'
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM'
     },
     plugins: [
         new CleanWebpackPlugin()
     ],
     mode: 'production'
-}
+};
 
-module.exports = webpackConfig
+module.exports = webpackConfig;

@@ -1,6 +1,6 @@
 /**
  * name: 
- * desc:
+ * desc: tooltip组件样式
  * date: 2019/7/6
  * author: kelvin
  */
@@ -10,12 +10,14 @@
     display: inline-block;
     -webkit-font-smoothing: antialiased;
     transform: translateZ(0);
+
     &-top {
         .tooltip-body-wrapper {
             bottom: 100%;
             transform: translate(-50%, -10px);
             left: 50%;
             margin-bottom: 15px;
+
             &::after {
                 content: '';
                 position: absolute;
@@ -34,12 +36,14 @@
             transform: translate(-50%, 0px);
         }
     }
+
     &-bottom {
         .tooltip-body-wrapper {
             top: 100%;
             transform: translate(-50%, 10px);
             left: 50%;
             margin-top: 15px;
+
             &:after {
                 content: '';
                 position: absolute;
@@ -53,16 +57,19 @@
                 border-bottom: solid #aaaaaa 10px;
             }
         }
+
         .tooltip-header-wrapper:hover .tooltip-body-wrapper {
             transform: translate(-50%, 0px);
         }
     }
+
     &-left {
         .tooltip-body-wrapper {
             right: 100%;
             transform: translate(-10px, -50%);
             top: 50%;
             margin-right: 15px;
+
             &:after {
                 content: '';
                 position: absolute;
@@ -76,16 +83,19 @@
                 border-left: solid #aaaaaa 10px;
             }
         }
+
         .tooltip-header-wrapper:hover .tooltip-body-wrapper {
             transform: translate(0px, -50%);
         }
     }
+
     &-right {
         .tooltip-body-wrapper {
             left: 100%;
             top: 50%;
             transform: translate(10px, -50%);
             margin-left: 15px;
+
             &:after {
                 content: '';
                 position: absolute;
@@ -99,28 +109,31 @@
                 border-right: solid #aaaaaa 10px;
             }
         }
+
         .tooltip-header-wrapper:hover .tooltip-body-wrapper {
             transform: translate(0, -50%);
         }
     }
 
     &-header-wrapper {
-        display: inline-flex;
+        display: inline-block;
         cursor: pointer;
         background-color: #dddddd;
     }
+
     &-header-wrapper:hover .tooltip-body-wrapper {
         opacity: 1;
         visibility: visible;
     }
+
     &-body-wrapper {
-        background-color: #aaaaaa;
+        //width: 100%;
+        background-color: #efefef;
         position: absolute;
         opacity: 0;
         visibility: hidden;
         transition: all .25s ease-out;
-        padding: 10px;
         display: block;
-        z-index: 10;
+        z-index: 100;
     }
 }
