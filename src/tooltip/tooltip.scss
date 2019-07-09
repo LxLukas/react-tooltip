@@ -117,27 +117,31 @@
     &-header-wrapper {
         display: inline-block;
         cursor: pointer;
-        background-color: #dddddd;
-        padding: 10px;
+        .tooltip-header {
+            background-color: #efefef;
+            padding: 10px;
+        }
     }
 
     &-header-wrapper:not(.disabled):hover .tooltip-body-wrapper {
-        opacity: 1;
+        //opacity: 1;
         visibility: visible;
     }
 
     &-body-wrapper {
-        //width: 100%;
         word-break: keep-all;
         border-radius: 2px;
-        padding: 10px;
         background-color: #555555;
         color: #fff;
         position: absolute;
-        opacity: 0;
+        //opacity: 0;
         visibility: hidden;
         transition: all .25s ease-out;
         display: inline-block;
-        z-index: 100;
+        z-index: 999;
+        .tooltip-body {
+            padding: 10px;
+            position: relative;
+        }
     }
 }

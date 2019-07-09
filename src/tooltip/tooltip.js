@@ -52,17 +52,15 @@ export default class Tooltip extends React.Component {
     };
 
     state = {
-        computedPosition: ''
+        computedPosition: '',
+        overValue: 'hidden'
     };
 
     handleMouseIn(e) {
-        console.log('event target:', e.target);
-
-        // if (!this.refs.tooltipHeader.children[0].contains(e.target)) {
-        //     // hover非 tooltip header 部分
-        //     return;
-        // }
-
+        if (!this.refs.tooltipHeader.children[0].contains(e.target)) {
+            // hover非 tooltip header 部分
+            return;
+        }
         let winWidth = window.innerWidth;
         let winHeight = window.innerHeight;
         let tooltipBodyRef = this.refs.tooltipBody;
@@ -70,51 +68,57 @@ export default class Tooltip extends React.Component {
         let bodyRect = tooltipBodyRef.getBoundingClientRect();
         let headerRect = tooltipHeaderRef.getBoundingClientRect();
 
-        console.log(bodyRect);
-        console.log(headerRect);
 
         switch (this.props.position) {
             case 'top':
                 if (headerRect.y - bodyRect.height - GAPWIDTH < 0) {
                     this.setState({
-                        computedPosition: 'bottom'
+                        computedPosition: 'bottom',
+                        overValue: 'initial'
                     });
                 } else {
                     this.setState({
-                        computedPosition: ''
+                        computedPosition: '',
+                        overValue: 'initial'
                     });
                 }
                 break;
             case 'bottom':
                 if (headerRect.bottom + bodyRect.height + GAPWIDTH > winHeight) {
                     this.setState({
-                        computedPosition: 'top'
+                        computedPosition: 'top',
+                        overValue: 'initial'
                     });
                 } else {
                     this.setState({
-                        computedPosition: ''
+                        computedPosition: '',
+                        overValue: 'initial'
                     });
                 }
                 break;
             case 'left':
                 if (headerRect.x - bodyRect.width - GAPWIDTH < 0) {
                     this.setState({
-                        computedPosition: 'right'
+                        computedPosition: 'right',
+                        overValue: 'initial'
                     });
                 } else {
                     this.setState({
-                        computedPosition: ''
+                        computedPosition: '',
+                        overValue: 'initial'
                     });
                 }
                 break;
             case 'right':
                 if (headerRect.right + bodyRect.width + GAPWIDTH > winWidth) {
                     this.setState({
-                        computedPosition: 'left'
+                        computedPosition: 'left',
+                        overValue: 'initial'
                     });
                 } else {
                     this.setState({
-                        computedPosition: ''
+                        computedPosition: '',
+                        overValue: 'initial'
                     });
                 }
                 break;
@@ -135,7 +139,9 @@ export default class Tooltip extends React.Component {
         const tooltipCls = classnames('tooltip', `tooltip-${computedPosition === '' ? position : computedPosition}`);
         const tooltipHeadCls = classnames('tooltip-header-wrapper', {'disabled': disabled});
         return (
-            <div className={tooltipCls}>
+            <div
+                style={{overflow: this.state.overValue}}
+                className={tooltipCls}>
                 <div
                     ref={"tooltipHeader"}
                     className={tooltipHeadCls}

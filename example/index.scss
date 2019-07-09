@@ -12,11 +12,22 @@
 
     .row {
         display: flex;
+        margin: 40px 0;
     }
 
     .col {
         flex: 1;
         justify-content: center;
         text-align: center;
+    }
+
+    .demo-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        margin: 4px 0;
     }
 }

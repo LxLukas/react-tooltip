@@ -17,7 +17,7 @@ class Index extends React.Component {
                 <div className="content">
                     <div className="row">
                         <div className="col">
-                            <Tooltip position="right" disabled={true}>
+                            <Tooltip position="right">
                                 <Tooltip.Header>右方</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div>内容过于真实，tooltips</div>
@@ -44,6 +44,150 @@ class Index extends React.Component {
                             <Tooltip position="bottom">
                                 <Tooltip.Header>下方</Tooltip.Header>
                                 <Tooltip.Body>
+                                    <div>内容过于真实，tooltips</div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <Tooltip position="right" disabled={true}>
+                                <Tooltip.Header>禁用</Tooltip.Header>
+                                <Tooltip.Body>
+                                    <div>内容过于真实，tooltips</div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="right">
+                                <Tooltip.Header>右方</Tooltip.Header>
+                                <Tooltip.Body>
+                                    <div>
+                                        <ul className="demo-list">
+                                            <li>香蕉</li>
+                                            <li>苹果</li>
+                                            <li>菠萝</li>
+                                            <li>橙子</li>
+                                        </ul>
+                                    </div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="top">
+                                <Tooltip.Header>上方</Tooltip.Header>
+                                <Tooltip.Body>
+                                    <div>
+                                        <img
+                                            style={{width: 400, height: 300}}
+                                            src="https://images.pexels.com/photos/2545254/pexels-photo-2545254.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                            alt="imgalt"/>
+                                    </div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="bottom">
+                                <Tooltip.Header>下方</Tooltip.Header>
+                                <Tooltip.Body>
+                                    <div>内容过于真实，tooltips</div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <Tooltip>
+                                <Tooltip.Header>
+                                    <img
+                                        style={{width: 250, height: 300}}
+                                        src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1562676122&di=67bb9370bb5ae31b2e4689b66a21659f&src=http://img4q.duitang.com/uploads/item/201412/04/20141204164541_8cz4E.jpeg"
+                                        alt=""/>
+                                </Tooltip.Header>
+                                <Tooltip.Body>
+                                    <p>作者：梵高</p>
+                                    <p>作品：向日葵</p>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="top">
+                                <Tooltip.Header style={{padding: 0}}>
+                                    <img
+                                        style={{width: 250, height: 200}}
+                                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562686206697&di=03cf02dd98d67c13dfadb3ddab7f5e13&imgtype=0&src=http%3A%2F%2Fcontent.image.alimmdn.com%2Fcms%2F12602%2F152281478603331490043806.jpg%40768w_1l"
+                                        alt=""/>
+                                </Tooltip.Header>
+                                <Tooltip.Body style={{padding: 15}}>
+                                    <div>
+                                        <p>作者：梵高</p>
+                                        <p>作品：星空</p>
+                                    </div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <Tooltip>
+                                <Tooltip.Header>
+                                    <img
+                                        style={{width: 250, height: 300}}
+                                        src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1562676122&di=67bb9370bb5ae31b2e4689b66a21659f&src=http://img4q.duitang.com/uploads/item/201412/04/20141204164541_8cz4E.jpeg"
+                                        alt=""/>
+                                </Tooltip.Header>
+                                <Tooltip.Body>
+                                    <p>作者：梵高</p>
+                                    <p>作品：向日葵</p>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="top">
+                                <Tooltip.Header style={{padding: 0}}>
+                                    <img
+                                        style={{width: 250, height: 200}}
+                                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562686206697&di=03cf02dd98d67c13dfadb3ddab7f5e13&imgtype=0&src=http%3A%2F%2Fcontent.image.alimmdn.com%2Fcms%2F12602%2F152281478603331490043806.jpg%40768w_1l"
+                                        alt=""/>
+                                </Tooltip.Header>
+                                <Tooltip.Body style={{padding: 15}}>
+                                    <div>
+                                        <p>作者：梵高</p>
+                                        <p>作品：星空</p>
+                                    </div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <Tooltip position="left">
+                                <Tooltip.Header>左边空间不足</Tooltip.Header>
+                                <Tooltip.Body style={{width: 300}}>
+                                    <div>内容过于真实，tooltips</div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="top">
+                                <Tooltip.Header>上方</Tooltip.Header>
+                                <Tooltip.Body>
+                                    <div>内容过于真实，tooltips</div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="bottom">
+                                <Tooltip.Header>下方空间不足</Tooltip.Header>
+                                <Tooltip.Body style={{height: 200, width: 200}}>
+                                    <div>内容过于真实，tooltips</div>
+                                </Tooltip.Body>
+                            </Tooltip>
+                        </div>
+                        <div className="col">
+                            <Tooltip position="right">
+                                <Tooltip.Header>右方空间不足</Tooltip.Header>
+                                <Tooltip.Body style={{width: 450}}>
                                     <div>内容过于真实，tooltips</div>
                                 </Tooltip.Body>
                             </Tooltip>
