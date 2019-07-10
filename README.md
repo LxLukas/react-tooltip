@@ -7,7 +7,7 @@ x-react-tooltip组件是基于react封装的，用于所有需要tooltip场景�
 
 特点：
 - 可以进行简单的tooltip使用
-- header和body可以高度定制化，可以任意放入任何内容
+- header和body彻底分离，可以高度定制化，可以任意放入任何内容
 
 ## 安装
 
@@ -74,3 +74,15 @@ npm run build
 
 npm publish
 ```
+
+## 版本信息
+
+- v1.0.10
+    
+    功能：
+    
+    1.tooltip基本功能
+    
+    缺陷
+    
+    1.没有加上页面滚动后，自动重新定位body内容的功能，下一个版本迭代加上

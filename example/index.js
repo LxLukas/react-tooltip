@@ -42,7 +42,17 @@ class Index extends React.Component {
                                     <div>内容过于真实，tooltips</div>
                                 </Tooltip.Body>
                             </Tooltip>
-                            <div style={{height: 50, marginTop: 20, color: '#d49e37'}}>{this.state.mouseEventTxt}</div>
+                            <div className="info">
+                                <p>position=right</p>
+                                <p>使用了onMouseIn&onMouseOut回调</p>
+                                <div style={{
+                                    height: 50,
+                                    marginTop: 20,
+                                    color: '#d49e37'
+                                }}>
+                                    {this.state.mouseEventTxt}
+                                </div>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position="left">
@@ -51,6 +61,9 @@ class Index extends React.Component {
                                     <div>内容过于真实，tooltips</div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div className="info">
+                                <p>position=left</p>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position="top"
@@ -62,6 +75,11 @@ class Index extends React.Component {
                                     <div>内容过于真实，tooltips</div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div className="info">
+                                <p>position=top</p>
+                                <p>arrow=false</p>
+                                <p>distance=50</p>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position="bottom">
@@ -70,6 +88,9 @@ class Index extends React.Component {
                                     <div>内容过于真实，tooltips</div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div className="info">
+                                <p>position=bottom</p>
+                            </div>
                         </div>
                     </div>
                     <div className="row">
@@ -80,9 +101,13 @@ class Index extends React.Component {
                                     <div>内容过于真实，tooltips</div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div className="info">
+                                <p>position=right</p>
+                                <p>disabled=true</p>
+                            </div>
                         </div>
                         <div className="col">
-                            <Tooltip position="right" arrow={false} distance={0}>
+                            <Tooltip position="right" arrow={false} distance={10}>
                                 <Tooltip.Header>右方列表</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div style={{width: 200}}>
@@ -93,9 +118,13 @@ class Index extends React.Component {
                                             <li>橙子</li>
                                         </ul>
                                     </div>
-                                    <div><a href="http://www.baidu.com"> edge</a></div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div className="info">
+                                <p>position=right</p>
+                                <p>arrow=false</p>
+                                <p>distance=10</p>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position="top">
@@ -109,6 +138,9 @@ class Index extends React.Component {
                                     </div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div className="info">
+                                <p>position=top</p>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position="bottom">
@@ -122,6 +154,9 @@ class Index extends React.Component {
                                     </div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div className="info">
+                                <p>position=bottom</p>
+                            </div>
                         </div>
                     </div>
                     <div className="row">
@@ -138,7 +173,9 @@ class Index extends React.Component {
                                     <p>作品：向日葵</p>
                                 </Tooltip.Body>
                             </Tooltip>
-                            <div>位置：left</div>
+                            <div className="info">
+                                <p>position=left</p>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position="top">
@@ -155,7 +192,9 @@ class Index extends React.Component {
                                     </div>
                                 </Tooltip.Body>
                             </Tooltip>
-                            <div>位置：top</div>
+                            <div className="info">
+                                <p>position=top</p>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position={"bottom"}>
@@ -170,7 +209,9 @@ class Index extends React.Component {
                                     <p>作品：向日葵</p>
                                 </Tooltip.Body>
                             </Tooltip>
-                            <div>位置：bottom</div>
+                            <div className="info">
+                                <p>position=bottom</p>
+                            </div>
                         </div>
                         <div className="col">
                             <Tooltip position="right">
@@ -187,7 +228,9 @@ class Index extends React.Component {
                                     </div>
                                 </Tooltip.Body>
                             </Tooltip>
-                            <div>位置：right</div>
+                            <div className="info">
+                                <p>position=right</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@
  */
 .tooltip-demo {
     overflow: hidden;
+
     .title {
         text-align: center;
         margin-bottom: 20px;
@@ -20,6 +21,16 @@
         flex: 1;
         justify-content: center;
         text-align: center;
+    }
+
+    .info {
+        margin-top: 10px;
+        border: 1px dashed #000;
+        margin: 20px;
+
+        & > p {
+            margin-bottom: 10px;
+        }
     }
 
     .demo-list {
