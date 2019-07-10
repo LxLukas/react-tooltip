@@ -10,6 +10,10 @@ import {Tooltip} from '../src/index';
 import './index.scss';
 
 class Index extends React.Component {
+    state = {
+        mouseEventTxt: ''
+    };
+
     render() {
         return (
             <div className="tooltip-demo">
@@ -17,12 +21,28 @@ class Index extends React.Component {
                 <div className="content">
                     <div className="row">
                         <div className="col">
-                            <Tooltip position="right" className="test-class">
+                            <Tooltip position="right"
+                                     className="test-class"
+                                     distance={50}
+                                     onMouseIn={() => {
+                                         console.log('mouse in');
+                                         this.setState({
+                                             mouseEventTxt: '鼠标移入了!'
+                                         });
+                                     }}
+                                     onMouseOut={() => {
+                                         console.log('mouse out');
+                                         this.setState({
+                                             mouseEventTxt: ''
+                                         });
+                                     }}
+                            >
                                 <Tooltip.Header>右方</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div>内容过于真实，tooltips</div>
                                 </Tooltip.Body>
                             </Tooltip>
+                            <div style={{height: 50, marginTop: 20, color: '#d49e37'}}>{this.state.mouseEventTxt}</div>
                         </div>
                         <div className="col">
                             <Tooltip position="left">
@@ -33,7 +53,10 @@ class Index extends React.Component {
                             </Tooltip>
                         </div>
                         <div className="col">
-                            <Tooltip position="top">
+                            <Tooltip position="top"
+                                     arrow={false}
+                                     distance={50}
+                            >
                                 <Tooltip.Header>上方</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div>内容过于真实，tooltips</div>
@@ -59,7 +82,7 @@ class Index extends React.Component {
                             </Tooltip>
                         </div>
                         <div className="col">
-                            <Tooltip position="right">
+                            <Tooltip position="right" arrow={false} distance={0}>
                                 <Tooltip.Header>右方列表</Tooltip.Header>
                                 <Tooltip.Body>
                                     <div style={{width: 200}}>
@@ -70,6 +93,7 @@ class Index extends React.Component {
                                             <li>橙子</li>
                                         </ul>
                                     </div>
+                                    <div><a href="http://www.baidu.com"> edge</a></div>
                                 </Tooltip.Body>
                             </Tooltip>
                         </div>

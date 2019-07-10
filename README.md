@@ -40,8 +40,10 @@ import {Tooltip} from 'x-react-tooltip'
 | position | string | 'top','bottom','right','left'四个值中的一个，默认为'bottom' | tooltip内容展现的位置 |
 | style | object | 无默认值 | 行内样式 |
 | disabled | bool | 默认为false | 是否禁用 |
-| mouseIn | function | 无默认值 | tooltip鼠标移入时的callback |
-| mouseOut | function | 无默认值 | tooltip鼠标移出时的callback |
+| arrow | bool | 默认为true | 是否展示箭头 |
+| distance | number | 默认为15px | 表示header与body之间的距离(单位:px) |
+| onMouseIn | function | 无默认值 | tooltip鼠标移入时的callback |
+| onMouseOut | function | 无默认值 | tooltip鼠标移出时的callback |
 
 - Tooltip.Header
 
